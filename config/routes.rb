@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'interests/create'
+
+  get 'interests/destroy'
+
   get 'home/index'
 
   get 'sessions/create'
