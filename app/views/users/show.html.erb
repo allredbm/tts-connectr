@@ -19,7 +19,7 @@
   <% if current_user.friends.include?(@user) %>
     <%= link_to 'Remove as Friend', relationships_path(current_user.relationships.find_by_friend_id(@user)), :method => :delete %>
   <% else %>
-    <%= link_to 'Add as Friend', relationships_path(:friend_id => @user), method: :post %>
+    <%= link_to "Add as Friend", relationships_path(:friend_id => @user), method: :post %>
   <% end %>
 <% end %>
 <%= link_to 'Edit', edit_user_path(@user) %> |

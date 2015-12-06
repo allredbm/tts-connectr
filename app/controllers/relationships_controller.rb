@@ -1,8 +1,5 @@
 class RelationshipsController < ApplicationController
 
-	def index
-	end
-
 	def create
 		@relationship = current_user.relationships.build(:friend_id => params[:friend_id])
 		if @relationship.save
@@ -18,7 +15,7 @@ class RelationshipsController < ApplicationController
 		@relationship = current_user.relationships.find(params[:id])
 		@relationship.destroy
 		flash[:notice] = "No longer friends."
-		#redirect here
+		redirect_to user_path(current_user.id)
 	end
 
 	private
