@@ -1,6 +1,12 @@
 class User < ActiveRecord::Base
-	validates :name, presence: true
+	has_many :relationships
+	has_many :friends, through: :relationships
 
+	has_many :inverse_relationships, :class_name => "Relationship", :foreign_key => "friend_id"
+	has_many :inverse_friends, :through => :inverse_relationships, :source => :user
+
+	validates :name, presence: true
+	
 	def self.create_with_omniauth(auth)
 		create! do |user|
 			user.provider = auth["provider"]

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pry'
 gem 'omniauth-facebook'
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
