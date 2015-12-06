@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :interests
   get 'interests/create'
 
   get 'interests/destroy'
@@ -9,7 +10,6 @@ Rails.application.routes.draw do
 
   get 'sessions/destroy'
 
-  resources :activities
   resources :users
   resources :relationships
 
