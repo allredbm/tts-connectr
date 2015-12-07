@@ -1,4 +1,6 @@
 class RelationshipsController < ApplicationController
+	# POST /relationships
+	# POST /relationships.json
 
 	def create
 		@relationship = current_user.relationships.build(:friend_id => params[:friend_id])
