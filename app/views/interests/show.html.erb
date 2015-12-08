@@ -11,9 +11,9 @@
 </p>
 
 <% if current_user.interests.include?(@interest) %>
-	<%= link_to "Unsubscribe", subscription_path(current_user.subscriptions.find_by_interest_id(@interest)), :method => :delete %>
+	<%= button_to 'Unsubscribe', {controller: 'subscriptions', action: 'destroy', id: current_user.subscriptions.find_by_interest_id(@interest)}, :method => :delete %>
 <% else %>
-	<%= link_to 'Subscribe', subscriptions_path(:interest_id => @interest), method: :post %>	
+	<%= button_to "subscribe", {action: 'create', controller: 'subscriptions', interest_id: @interest.id } %>	
 <% end %>
 
 <%= link_to 'Edit', edit_interest_path(@interest) %> |

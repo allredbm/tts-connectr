@@ -12,7 +12,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :relationships
-  resources :interests
   resources :subscriptions
 
   # The priority is based upon order of creation: first created -> highest priority.
