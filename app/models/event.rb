@@ -1,3 +1,3 @@
 class Event < ActiveRecord::Base
-	belong_to :interest
+	belongs_to :interest
 end
