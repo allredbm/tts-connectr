@@ -1,3 +1,4 @@
 class Interest < ActiveRecord::Base
-	has_many :activities
+	has_many :subscriptions
+	has_many :users, through: :subscriptions
 end

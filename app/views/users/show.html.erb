@@ -17,9 +17,9 @@
 
 <% if current_user.uid != @user.uid %> 
   <% if current_user.friends.include?(@user) %>
-    <%= link_to 'Remove as Friend', relationships_path(current_user.relationships.find_by_friend_id(@user)), :method => :delete %>
+    <%= button_to 'Remove as Friend', {controller: 'relationships', action: 'destroy', id: current_user.relationships.find_by_friend_id(@user)}, :method => :delete %>
   <% else %>
-    <%= link_to "Add as Friend", relationships_path(:friend_id => @user), method: :post %>
+    <%= button_to "Add as Friend", {action: 'create', controller: 'relationships', friend_id: @user.id } %>
   <% end %>
 <% end %>
 <%= link_to 'Edit', edit_user_path(@user) %> |
