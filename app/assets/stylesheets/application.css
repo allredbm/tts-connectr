@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+	background-color: #2b2b2a ;
+	font-family: 'Poiret One', cursive;
+    background-image: url("img2.png");
+}
+
+
+.div1 {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: 01%;
+	padding-top: 5%;
+	border: 1px ;
+}
+
+
+
+
+.header1 {
+	position: relative;
+	float:left;
+	left: 1%;
+	margin-top: 4%;
+	color:  white;
+	font-size: 3.5em;
+	font-family: 'Poiret One', cursive;
+
+}
+
+.header2 {
+	font-family: 'Poiret One', cursive;
+	color:  black;
+}
+
+.w3-card-24 {
+	margin-left: 22%;
+	margin-right: 22%;
+	padding-top: 50px;
+	padding-bottom: 2%;
+	position: relative;
+	top: 140px;
+}
