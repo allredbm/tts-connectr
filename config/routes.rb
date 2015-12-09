@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :events
   resources :interests
   get 'interests/create'
 
@@ -13,6 +14,8 @@ Rails.application.routes.draw do
   resources :users
   resources :relationships
   resources :subscriptions
+  resources :interests
+  resources :events
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
