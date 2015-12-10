@@ -15,6 +15,15 @@
   <%= @user.location %>
 </p>
 
+<p><strong>Interests:</strong>
+
+<%@user.interests.each do |interest|%>
+<%= interest.name %>
+<%end%>
+</p>
+
+
+
 <% if current_user.uid != @user.uid %> 
   <% if current_user.friends.include?(@user) %>
     <%= button_to 'Remove as Friend', {controller: 'relationships', action: 'destroy', id: current_user.relationships.find_by_friend_id(@user)}, :method => :delete %>
@@ -22,5 +31,6 @@
     <%= button_to "Add as Friend", {action: 'create', controller: 'relationships', friend_id: @user.id } %>
   <% end %>
 <% end %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
