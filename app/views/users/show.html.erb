@@ -103,8 +103,17 @@
 <p><strong>Interests:</strong>
 
 <%@user.interests.each do |interest|%>
-<%= interest.name %>
+<%= interest.name %>.
 <%end%>
+</p>
+
+<p><strong>Activities:</strong>
+
+<% @user.interests.each do |interest| %>
+  <% interest.events.each do |event| %>
+    <%= event.name %>  <br>
+  <% end %>
+<% end %>
 </p>
 
 <p><strong>Friends</strong>
