@@ -5,6 +5,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  font-color: white;
+}
 .navbar a {
   font-family: "Poiret One", cursive;
 }
@@ -14,7 +17,7 @@
 }
 
 body {
-	/*background-color: #ddd;*/
+	background-color: #ddd;
 	color: #222;
 
   	font-weight: 300;
