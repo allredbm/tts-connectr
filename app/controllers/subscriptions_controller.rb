@@ -3,7 +3,8 @@ class SubscriptionsController < ApplicationController
 	# POST /subscriptions.json
 
 	def create
-		@subscription = current_user.subscriptions.build(:interest_id => params[:friend_id])
+
+		@subscription = current_user.subscriptions.new(:interest_id => params[:interest_id])
 		if @subscription.save
 			flash[:notice] = "Subscribed to this interest!"
 			redirect_to user_path(current_user.id)
