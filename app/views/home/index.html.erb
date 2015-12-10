@@ -85,8 +85,10 @@
     <%= image_tag(current_user.normalimage) %>
     <%= link_to "Sign Out", signout_path, id: "sign_out" %>
 
+<div id="button">
  <%= link_to "Create Profile", edit_user_path(current_user.id), class: 'w3-btn w3-teal'%>
   <%= link_to "Go to Profile", user_path(current_user.id), class: 'w3-btn w3-teal' %>
+  </div>
   <% else %>
     <%= link_to "Sign in with Facebook", "auth/facebook", id: "sign_in"  %>
   <% end %>
